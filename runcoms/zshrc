@@ -11,7 +11,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Set up docker
 eval "$(docker-machine env default)"
 
 export KEYTIMEOUT=1
 bindkey -M vicmd '/' vi-history-search-backward
+
+export EDITOR=vim
+export VISUAL=vim
